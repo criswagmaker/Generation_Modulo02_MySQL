@@ -26,11 +26,11 @@ CREATE TABLE tb_pizza(
 select * from tb_categoria;
 select * from tb_pizza;
 
-INSERT INTO tb_categoria(categoria, tamanho, massa) values ("Salgada", "Grande", "Fina");
-INSERT INTO tb_categoria(categoria, tamanho, massa) values ("Doce", "Pequena", "Fina");
-INSERT INTO tb_categoria(categoria, tamanho, massa) values ("Salgada", "Média", "Grossa");
-INSERT INTO tb_categoria(categoria, tamanho, massa) values ("Doce", "Grande", "Grossa");
-INSERT INTO tb_categoria(categoria, tamanho, massa) values ("Salgada", "Pequena", "Fina");
+INSERT INTO tb_categoria(categoria, tamanho, massa) VALUES ("Salgada", "Grande", "Fina");
+INSERT INTO tb_categoria(categoria, tamanho, massa) VALUES ("Doce", "Pequena", "Fina");
+INSERT INTO tb_categoria(categoria, tamanho, massa) VALUES ("Salgada", "Média", "Grossa");
+INSERT INTO tb_categoria(categoria, tamanho, massa) VALUES ("Doce", "Grande", "Grossa");
+INSERT INTO tb_categoria(categoria, tamanho, massa) VALUES ("Salgada", "Pequena", "Fina");
 
 INSERT INTO tb_pizza(nome, borda, ingredientes, preco, quantidade, categoria_id) 
 VALUES ("Calabresa","Catupiry","Calabresa e Cêbola", 20.00, 1, 1);
@@ -60,5 +60,5 @@ SELECT * FROM tb_pizza WHERE preco > 45;
 SELECT * FROM tb_pizza WHERE preco >= 29 AND preco <= 60;
 SELECT * FROM tb_pizza WHERE nome LIKE "%C%";
 
-SELECT * FROM tb_pizza INNER JOIN tb_categoria on tb_categoria.id = tb_pizza.id;
-SELECT * FROM tb_categoria INNER JOIN tb_pizza on tb_pizza.categoria_id = tb_categoria.id WHERE categoria_id = 3;
+SELECT * FROM tb_pizza INNER JOIN tb_categoria ON tb_categoria.id = tb_pizza.id;
+SELECT * FROM tb_categoria INNER JOIN tb_pizza ON tb_pizza.categoria_id = tb_categoria.id WHERE categoria_id = 3;
